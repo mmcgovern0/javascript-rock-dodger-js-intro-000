@@ -64,7 +64,6 @@ function createRock(x) {
 
   ROCKS.push(rock)
 
-  // Finally, return the rock element you've created
   return rock
 }
 
@@ -75,6 +74,9 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
+  clearInterval(gameInterval)
+  
+  ROCKS.
 }
 
 function moveDodger(e) {
