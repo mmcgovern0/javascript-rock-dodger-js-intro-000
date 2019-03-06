@@ -12,11 +12,6 @@ const START = document.getElementById('start')
 
 var gameInterval = null
 
-/**
- * Be aware of what's above this line,
- * but all of your work should happen below.
- */
-
 function checkCollision(rock) {
   const top = positionToInteger(rock.style.top)
 
@@ -42,10 +37,6 @@ function createRock(x) {
 
   GAME.appendChild(rock);
 
-  /**
-   * This function moves the rock. (2 pixels at a time
-   * seems like a good pace.)
-   */
   function moveRock() {
     rock.style.top = `${top += 2}px`
     
@@ -67,16 +58,17 @@ function createRock(x) {
   return rock
 }
 
-/**
- * End the game by clearing `gameInterval`,
- * removing all ROCKS from the DOM,
- * and removing the `moveDodger` event listener.
- * Finally, alert "YOU LOSE!" to the player.
- */
+
 function endGame() {
   clearInterval(gameInterval)
   
-  ROCKS.forEach(function(rock))
+  ROCKS.forEach(function(rock) {
+    rock.remove()
+  })
+  
+  document.removeEventListener('keydown', moveDodger)
+  
+  return alert("YOU LOSE!")
 }
 
 function moveDodger(e) {
