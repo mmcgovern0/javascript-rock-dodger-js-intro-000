@@ -38,7 +38,7 @@ function createRock(x) {
   GAME.appendChild(rock);
 
   function moveRock() {
-    rock.style.top = `${top += 2}px`
+    rock.style.top = `${top += 2}px`;
     
     if (checkCollision(rock)) {
       return endGame();
@@ -85,7 +85,7 @@ function moveDodgerLeft() {
     const left = positionToInteger(DODGER.style.left)
     
     if (left > 0){
-      DODGER.style.left = `${left - 4}px`
+      DODGER.style.left = `${left - 4}px`;
     }
   })
 }
@@ -95,7 +95,7 @@ function moveDodgerRight() {
     const left = positionToInteger(DODGER.style.left)
     
     if (left < 360) {
-      DODGER.style.right = `${left + 4}px`
+      DODGER.style.right = `${left + 4}px`;
     }
   })
 
